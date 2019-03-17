@@ -1,0 +1,353 @@
+ 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+    
+        
+        
+
+body{
+
+    width: 922px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    background: url(background.jpg) center fixed;
+    background-position: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family:   sans-serif;
+}
+
+.loginboxS{
+    width: 320px;
+    height: 490px;
+    background: #fff fixed;
+    opacity: 0.955;
+    color: #000;
+    top: 50%;
+    left: 22%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.avatarS{
+    width: 100px;
+    height: 100px;
+    border-radius: 0%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginboxS p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginboxS input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginboxS input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+}
+.loginboxS input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginboxS input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.loginboxS a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(12, 12, 12);
+}
+
+.loginboxS a:hover
+{
+    color: #ffc107;
+}
+.loginbox{
+    width: 320px;
+    height: 490px;
+    background: #fff fixed;
+    opacity: 0.955;
+    color: #000;
+    top: 50%;
+    right: 2%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(12, 12, 12);
+}
+
+.loginbox a:hover
+{
+    color: #ffc107;
+}
+.google
+{position: absolute;
+width: 50px;
+height: 50.58px;
+left: 90px;
+top: 420px;
+
+background: url(google-plus.png);
+background-size: 50px;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.facebook
+{position: absolute;
+width: 50px;
+height: 50.58px;
+left: 180px;
+top: 420px;
+
+background: url(facebook.png);
+background-size: 50px;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.loginwith
+{
+    position: absolute;
+width: 185px;
+height: 45px;
+left: 120px;
+top: 390px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20spx;
+line-height: normal;
+
+color: #000000;
+
+
+}
+#line1
+{
+    position: absolute;
+width: 83.01px;
+height: 0px;
+left: 193px;
+top: 400px;
+
+border: 1px solid #000000
+}
+#line2
+{
+    position: absolute;
+width: 83.01px;
+height: 0px;
+left: 35px;
+top: 400px;
+
+border: 1px solid #000000
+}
+#line3
+{
+    position: absolute;
+width: .002px;
+height: 500px;
+top: 50px;
+left: 600px;
+opacity: .8;
+
+border: 2.5px solid #FFFFFF;
+transform: rotate(_90deg);
+
+}
+    </style>
+</head>
+<body>
+
+<?php 
+if(isset($_POST['txtmail'])){
+    $mid=$_POST['txtmail'];
+}
+if(isset($_POST['txtpass'])){
+$pass=$_POST['txtpass'];
+}
+
+
+ $conn=mysql_connect("localhost","root","") or die("Unable to Connect");
+ mysql_select_db("studentdata") or die("Invlaid DB");
+    
+	
+		
+		 @$pass1=mysql_query("select * from student_signin where mailid='$mid'") or die ("Unable to Find");
+         while($pass2=mysql_fetch_array($pass1)){
+			 @$mid1=$pass2['mailid'];
+	 @$pass3=$pass2['password'];
+		 }
+ 		  if(@$mid1==@$mid){
+		  if(@$pass3==@$pass){
+			  
+		 @$rows=mysql_query("select * from student_signin where mailid='$mid' AND password='$pass' ") or die ("No Such Account are Here");	 		
+ while($row=mysql_fetch_array($rows)){
+	 @$f_name=$row['first_name'];
+     @$l_name=$row['last_name'];
+	 @$mobile_no=$row['mobile_no'];
+     @$mid=$row['mailid'];
+	 @$gender=$row['gender'];
+	 @$name=$f_name.$l_name ;
+header("location:myhtmls.php?txtname=$name&txtmob=$mobile_no&txtmail=$mid&txtgender=$gender");
+ }
+		 }
+		 else
+		 echo '<script>alert("Password is Not correct");</script>' ;
+	  }
+	  else 
+		 echo '<script>alert("Email is Not correct");</script>' 
+		 
+ ?>
+ 
+
+    <div class="body"></div>
+    <div class="loginboxS">
+            <img src="school.png" class="avatarS">
+            <h1>School login</h1>
+            <form>
+                <p>School id</p>
+                <input type="text"  placeholder="Enter ID">
+                <p>Password</p>
+                <input type="password" placeholder="Enter passward">
+                <input id="log" type="submit" name value="Login">
+                <a href="#">forgot passward?</a>
+                <br>
+                <a href="http://localhost/Learning/school_signup.html">Don't have an account?</a>
+                
+    
+            </form>
+        </div>
+    
+    <div class="loginbox">
+        <img src="user.png" class="avatar">
+        <h1>Applicant login</h1>
+        <form name=f1 action="myhtml.php" method="POST" >
+            <p>Username</p>
+            <input type="text" name="txtmail" placeholder="Enter username">
+            <p>Password</p>
+            <input type="password" name="txtpass" placeholder="Enter passward">
+            <input id="log" type="submit" value="Login">
+            <a href="#">forgot passward?</a>
+            <br>
+            <a href="http://localhost/Learning/student_signup.html">Don't have an account?</a>
+            <div class="loginwith">Login with</div>
+            <div id="line1"></div>
+            <div id="line2"></div>
+            
+            
+            <img src="google-plus.png" class="google">
+            <div class="facebook"></div>
+            
+        </form>
+        
+    </div>
+    <div id="line3"></div>
+   
+    <script src="example.js">
+    </script>
+    
+</body>
+</html>

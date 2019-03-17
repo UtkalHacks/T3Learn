@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script language="javascript">
+function checkpass(){
+var pass,pass1;
+pass=document.f1.txtpassword.value;
+pass1=document.f1.txtcpassword.value;
+if(pass!=pass1){
+alert("Confirm Password Not Matching");
+return false;
+}
+else 
+return true;
+}
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+
+width: 922px;
+height: 600px;
+margin: 0;
+padding: 0;
+background: url(background.jpg) center fixed;
+background-position: fixed;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+font-family:   sans-serif;
+}
+.loginbox{
+    width: 420px;
+    height:550px;
+    background: #fff fixed;
+    opacity: 0.955;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(12, 12, 12);
+}
+
+.loginbox a:hover
+{
+    color: #ffc107;
+}
+.google
+{position: absolute;
+width: 50px;
+height: 50.58px;
+left: 90px;
+top: 570px;
+
+background: url(google-plus.png);
+background-size: 50px;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.facebook
+{position: absolute;
+width: 50px;
+height: 50.58px;
+left: 180px;
+top: 570px;
+
+background: url(facebook.png);
+background-size: 50px;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.loginwith
+{
+    position: absolute;
+width: 185px;
+height: 45px;
+left: 120px;
+top: 550px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 20spx;
+line-height: normal;
+
+color: #000000;
+
+
+}
+#line1
+{
+    position: absolute;
+width: 83.01px;
+height: 0px;
+left: 193px;
+top: 560px;
+
+border: 1px solid #000000
+}
+#line2
+{
+    position: absolute;
+width: 83.01px;
+height: 0px;
+left: 35px;
+top: 560px;
+
+border: 1px solid #000000
+}
+    </style>
+</head>
+<body>
+        <div class="loginbox">
+                <img src="user.png" class="avatar">
+                <h1>Applicant Sign Up</h1>
+                <form name="f1" action="student_signup.php" method="POST" onsubmit="return checkpass();" >
+                    <p>Full name</p>
+                    <input type="text" name="txtname" placeholder="Full name">
+                    <p>Email</p>
+                    <input type="text" name="txtmail" placeholder="Email">
+                    <p>Create Password</p>
+                    <input type="password" name="txtpassword" placeholder="Create Password">
+                    <p>confirm Password</p>
+                    <input type="password" name="txtcpassword" placeholder="Confirm Password">
+                    <input id="log" type="submit" name value="Sign Up">
+                    
+                   
+                    
+                </form>
+                
+            </div>
+    
+</body>
+</html>
